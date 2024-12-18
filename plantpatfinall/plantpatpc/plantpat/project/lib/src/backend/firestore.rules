@@ -1,0 +1,41 @@
+// service cloud.firestore {
+//   match /databases/{database}/documents {
+//     // Users can read and write their own document in Theusers collection
+//     match /Theusers/{userId} {
+//       allow read, write: if request.auth != null && request.auth.uid == userId;
+//     }
+
+//     // Users can read and write their own token document in users_Token_Notification collection
+//     match /users_Token_Notification/{userId} {
+//       allow read, write: if request.auth != null && request.auth.uid == userId;
+//     }
+
+//     // Users can read and write their own notifications in notifications collection
+//     match /notifications/{userId}/userNotifications/{notificationId} {
+//       allow read, write: if request.auth != null && request.auth.uid == userId;
+//     }
+//   }
+// }
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read and write access to all users for testing
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+  }
+  
+}
+
+
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+

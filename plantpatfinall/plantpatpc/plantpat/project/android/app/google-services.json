@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "536356407905",
+    "project_id": "plantpat-e8321",
+    "storage_bucket": "plantpat-e8321.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536356407905:android:a8a431339a45b0c1037820",
+        "android_client_info": {
+          "package_name": "com.example.plantpat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDna5Re2swo5RmpeNuTlAUwC9_tXts2Ys4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
